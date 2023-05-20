@@ -83,6 +83,9 @@ body {
 .list-item:focus {
   color: #404BBF;
 }
+.current{
+  color:#404BBF;
+}
 
 .current:after{
   content: "";
@@ -350,9 +353,7 @@ body {
   border: 1px solid #8E8F99;
   border-radius: 4px;
   background-color: #fff;
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-list-item-link:hover,
 .customers-list-item-link:focus {
@@ -573,7 +574,7 @@ transform: translate(0, 0);
   height:100%;
   z-index: 100;
   background-color:var(--modal-bg-color);
-  opacity:1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden{
   visibility: hidden;
@@ -586,10 +587,11 @@ transform: translate(0, 0);
   left:50%;
   transform:translate(-50%,-50%);
   width:408px;
-  height:576px;
+  min-height:576px;
   background:#FCFCFC;
   border-radius:4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition:transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn{
   position:absolute;
@@ -598,6 +600,8 @@ transform: translate(0, 0);
   align-items: center;
   top:24px;
   right:24px;
+  width:24px;
+  height:24px;
   padding:0;
   width:30px;
   height:30px;
