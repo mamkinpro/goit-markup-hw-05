@@ -535,8 +535,8 @@ ul{
   flex-wrap: wrap;
   gap: 48px 24px;
 }
-.portolio-list-item:hover .overlay,
-.portolio-list-item:focus .overlay{
+.portolio-list-item:hover.overlay,
+.portolio-list-item:focus.overlay{
 transform: translateY(0%);
 }
 .portfolio-link-product{
