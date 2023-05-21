@@ -535,9 +535,7 @@ ul{
   flex-wrap: wrap;
   gap: 48px 24px;
 }
-.portolio-list-item:hover .overlay{
- transform: translateY(0%);
-}
+.portolio-list-item:hover,
 .portolio-list-item:focus .overlay{
  transform: translateY(0%);
 }
